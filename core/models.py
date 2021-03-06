@@ -7,14 +7,12 @@ from django.core.validators import MinLengthValidator
 class UserManager(BaseUserManager):
     def create_user(self, username, email, password=None, **extra_fields):
         user = self.model(
-            username=self.model.normalize_username(username), # type: ignore
+            username=self.model.normalize_username(username),
             email=self.normalize_email(email),
             **extra_fields
         )
-
-        user.set_password(password) # type: ignore
+        user.set_password(password)
         user.save()
-
         return user
 
 class User(AbstractBaseUser, PermissionsMixin):
