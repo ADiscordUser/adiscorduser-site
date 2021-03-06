@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <!-- UX -->
+        <link rel="stylesheet" href="{% static 'core/stylesheet.css' %}" type="text/css">
+        <link rel="icon" href="{% static 'core/favicon.png' %}" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Meta stuff for search engines and Discord's link preview -->
+        <meta name="og:site_name" content="The A Discord User Network">
+        <meta name="og:title" content="{{ title }}">
+        <meta name="og:description" content="{{ description }}">
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+        </div>
+        <h2>Facts about Me</h2>
+        <ul>
+            <li>Acts pretty gay</li>
+            <li>Enjoys making Discord bots</li>
+            <li>Hates life</li>
+        </ul>
+    </body>
+</html>
